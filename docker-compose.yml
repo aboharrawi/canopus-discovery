@@ -1,0 +1,13 @@
+services:
+  app:
+    image: 'canopus-discovery:0.0.1'
+    container_name: canopus-discovery
+    build: '.'
+    ports:
+      - "8761:8761"
+    networks:
+      - canopus
+
+networks:
+  canopus:
+    name: canopus
